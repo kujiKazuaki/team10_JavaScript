@@ -1,0 +1,31 @@
+body {
+  background-color: #ffffdd;
+  color: #008833;
+  font-size: 15px;
+  line-height: 1.2;
+}
+h2 {
+  color: #990000;
+}
+h3 {
+  color: #990000;
+}
+table {
+  background-color: #ffffff;
+  color: #0000ff;
+  font-size: 15px;
+}
+.tabh {
+  background-color: #ffcccc;
+}
+#id0 {
+  color: #990000;
+}
+#idc {
+  color: #505050;
+  font-size: 12px;
+}
+#idr {
+  color: #cc0000;
+  font-size: 12px;
+}

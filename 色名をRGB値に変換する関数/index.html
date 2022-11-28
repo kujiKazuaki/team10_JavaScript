@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body onLoad="init()">
+    <blockquote>
+      <hr size="3" />
+      <form name="form1">
+        color name： <input type="text" size="10" name="cname" value="pink" />　
+        <input type="button" value="RGB変換" onClick="conv()" />　　　
+        <br />
+
+        <canvas
+          width="350"
+          height="40"
+          id="canvas"
+          style="border: 1px solid green"
+        ></canvas>
+      </form>
+      <span id="idc">　　（注）不正な色名に対しては#0000ffが返される。</span>
+      <hr size="3" />
+      <br />
+    </blockquote>
+
+    <script type="text/javascript" src="col2p.js"></script>
+  </body>
+</html>
