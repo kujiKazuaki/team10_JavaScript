@@ -1,18 +1,18 @@
-var convert = document.getElementById("convert");
-var color = document.getElementById("color");
-var before = document.getElementById("before");
-var beforecode = document.getElementById("before-code");
-var after = document.getElementById("after");
-var aftercode = document.getElementById("after-code");
+const convert = document.getElementById("convert");
+const color = document.getElementById("color");
+const before = document.getElementById("before");
+const beforecode = document.getElementById("before-code");
+const after = document.getElementById("after");
+const aftercode = document.getElementById("after-code");
 
 // 変換ボタンをクリックしたとき
 convert.addEventListener(
   "click",
   function () {
     // 入力した値を取得
-    var colorcode = color.value;
+    const colorcode = color.value;
     // 変換した値を取得
-    var rgbArr = convert_colorcode_to_rgb(colorcode);
+    const rgbArr = convert_colorcode_to_rgb(colorcode);
 
     // 変換に失敗したときは処理終了
     if (!rgbArr) {
@@ -24,7 +24,7 @@ convert.addEventListener(
     if (colorcode.split("")[0] !== "#") {
       colorcode = "#" + colorcode;
     }
-    var rgb = "rgb(" + rgbArr[0] + ", " + rgbArr[1] + ", " + rgbArr[2] + ")";
+    const rgb = "rgb(" + rgbArr[0] + ", " + rgbArr[1] + ", " + rgbArr[2] + ")";
 
     before.style.backgroundColor = colorcode;
     beforecode.innerHTML = colorcode;
@@ -43,7 +43,7 @@ function convert_colorcode_to_rgb(colorcode) {
 
   // カラーコードが省略されている場合は6桁に戻す
   if (colorcode.length === 3) {
-    var codeArr = colorcode.split("");
+    const codeArr = colorcode.split("");
     colorcode =
       codeArr[0] +
       codeArr[0] +
@@ -57,8 +57,8 @@ function convert_colorcode_to_rgb(colorcode) {
   if (colorcode.length !== 6) {
     return false;
   }
-  var r = parseInt(colorcode.substring(0, 2), 16);
-  var g = parseInt(colorcode.substring(2, 4), 16);
-  var b = parseInt(colorcode.substring(4, 6), 16);
+  let r = parseInt(colorcode.substring(0, 2), 16);
+  let g = parseInt(colorcode.substring(2, 4), 16);
+  let b = parseInt(colorcode.substring(4, 6), 16);
   return [r, g, b];
 }
